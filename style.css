@@ -1,5 +1,20 @@
+html,
 body{
     font-size: 18px;
+    cursor: none;
+}
+
+
+#cursor{
+    position: fixed;
+    width:  98px;
+    height: 98px;
+    background: url("assets/cursor.png") no-repeat center center;
+
+    pointer-events: none;
+    
+    z-index: 9999;
+
 }
 
 #title{
