@@ -2,7 +2,8 @@ html,
 button,
 body{
     font-size: 18px;
-    cursor: url('https://cdn.cursors-4u.net/previews/normal-9e607e2c-64.webp') 28 24, auto !important;
+    cursor: url("assets/normal-e5daac5e.cur") 28 24, auto !important;
+    
 }
 
 span#cursor {
