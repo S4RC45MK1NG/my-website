@@ -1,22 +1,64 @@
 html,
+button,
 body{
     font-size: 18px;
-    cursor: none;
+    cursor: url('https://cdn.cursors-4u.net/previews/normal-9e607e2c-64.webp') 28 24, auto !important;
 }
 
+span#cursor {
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    background-color: #949090;
 
-#cursor{
-    position: fixed;
-    width:  98px;
-    height: 98px;
-    background: url("assets/cursor.png") no-repeat center center;
+    animation: blink 1s steps(1) infinite;
+}
 
-    pointer-events: none;
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+button#enter_button{
+    opacity: 0;
+    animation: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes clicked {
+    0% {
+        background-color: antiquewhite;
+        opacity: 1;
+    }
+    5% {
+        background-color: black;
+    }
+    10% {
+        background-color: antiquewhite;
+    }
+    15% {
+        background-color: black;
+    }
+    20% {
+        background-color: antiquewhite;
+    }
+    40% {
+        background-color: black;
+    }
+    70% {
+        background-color: antiquewhite;
+    }
     
-    z-index: 9999;
-
-}
-
-#title{
-    font-size: 40px;
+    100% {
+        background-color: black;
+    }
 }
