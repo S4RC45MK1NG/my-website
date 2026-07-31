@@ -2,7 +2,7 @@ html,
 button,
 body{
     font-size: 18px;
-    cursor: url("assets/normal-e5daac5e.cur") 28 24, auto !important;
+    cursor: url("assets/normal-e5daac5e.cur") 10 10, auto !important;
     
 }
 
@@ -35,7 +35,7 @@ button#enter_button{
     }
 }
 
-@keyframes clicked {
+@keyframes enter_clicked {
     0% {
         background-color: antiquewhite;
         opacity: 1;
@@ -62,4 +62,137 @@ button#enter_button{
     100% {
         background-color: black;
     }
+}
+
+#starter_page {
+    z-index: 2;
+}
+#main_page {
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+button#Home {
+    position: relative;
+    overflow: hidden;
+    visibility: hidden;
+}
+button#Home::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-color: #8b8b8b;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.5s ease;
+
+    z-index: -1;
+}
+button#Home:hover::before{
+    transform: scaleX(1);
+}
+
+button#About {
+    visibility: hidden;
+}
+button#About::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-color: #8b8b8b;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.5s ease;
+
+    z-index: -1;
+}
+button#About:hover::before{
+    transform: scaleX(1);
+}
+
+button#Projects {
+    visibility: hidden;
+}
+button#Projects::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-color: #8b8b8b;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.5s ease;
+
+    z-index: -1;
+}
+button#Projects:hover::before{
+    transform: scaleX(1);
+}
+
+button#Placeholder {
+    visibility: hidden;
+}
+button#Home::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-color: #8b8b8b;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.5s ease;
+
+    z-index: -1;
+}
+button#Home:hover::before {
+    transform: scaleX(1);
+}
+
+@keyframes access_clicked {
+    0% {
+        background-color: greenyellow;
+        opacity: 1;
+    }
+    5% {
+        background-color: green;
+    }
+    10% {
+        background-color: greenyellow;
+    }
+    15% {
+        background-color: green;
+    }
+    20% {
+        background-color: greenyellow;
+    }
+    40% {
+        background-color: green;
+    }
+    70% {
+        background-color: greenyellow;
+    }
+    
+    100% {
+        background-color: green;
+    }
+}
+
+p#line {
+    font: "JetBrains Mono", monospace;
 }

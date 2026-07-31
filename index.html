@@ -9,11 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+    <script src="start_page_loader.js"></script>
+    <script src="main_page_loader.js"></script>
+    <script src="controller.js"></script>
+    <script src="bg_line_gen.js"></script>
   </head>
 
   <body class="flex min-h-screen bg-black font-[Outfit] text-gray-400">
     
-    <div class="flex flex-col justify-center items-center w-full h-full">
+    <div id="starter_page" class="absolute inset-0 flex flex-col justify-center items-center w-full h-full">
+      
       <div class="flex justify-center items-center">
         <p id="starter_text" class="flex text-lg"></p>
         <span id="cursor" class="flex w-[15px] h-[30px] bg-no-repeat bg-center bg-white pointer-events-none"></span>
@@ -25,17 +32,56 @@
           Enter
         </button>
       </div>
-      <script src="start_page_loader.js"></script>
+
     </div>
+
+
+    <div id="main_page" class="absolute inset-0 justify-center items-center flex flex-col w-full h-full">
+      <div id="access_area" class="flex flex-wrap w-[90vw]  border-0 border-b-2 border-gray-400">
+        
+        <button id="Home" class="text-lg text-gray-600 p-5 ml-10">
+          Home
+        </button>
+
+        <button id="About" class="text-lg text-gray-600 p-3">
+          About
+        </button>
+        
+        <button id="Projects" class="text-lg text-gray-600 p-5">
+          Projects
+        </button>
+
+        <button id="" class="text-lg text-gray-600 p-5">
+          Placeholder
+        </button>
+
+      </div>
+
+      <div id="page" class="flex w-full h-full">
+        <div id="main_page_bg" class="absolute inset-0 flex justify-center items-center overflow-hidden w-full h-full -z-1 pointer-events-none">
+          <pre class="font-mono text-gray-500 opacity-[0.1]">
+███████╗██╗  ██╗██████╗  ██████╗██╗  ██╗███████╗███╗   ███╗██╗  ██╗ ██╗███╗   ██╗ ██████╗
+██╔════╝██║  ██║██╔══██╗██╔════╝██║  ██║██╔════╝████╗ ████║██║ ██╔╝███║████╗  ██║██╔════╝
+███████╗███████║██████╔╝██║     ███████║███████╗██╔████╔██║█████╔╝ ╚██║██╔██╗ ██║██║  ███╗
+╚════██║╚════██║██╔══██╗██║     ╚════██║╚════██║██║╚██╔╝██║██╔═██╗  ██║██║╚██╗██║██║   ██║
+███████║     ██║██║  ██║╚██████╗     ██║███████║██║ ╚═╝ ██║██║  ██╗ ██║██║ ╚████║╚██████╔╝
+╚══════╝     ╚═╝╚═╝  ╚═╝ ╚═════╝     ╚═╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝
+          </pre>
+        </div>
+
+        <div id="intro_text" class="flex justify-center items-center w-fit h-fit">
+            <p class="flex p-auto m-auto">
+              Sigmasigmaismagaosigvnagnawqogitqnrouin
+            </p>
+        </div>
+      </div>
+
+    </div>
+
+
 
   </body>
 
     
-
-
-
-
-
-
 
 </html>
